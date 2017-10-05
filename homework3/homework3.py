@@ -77,25 +77,18 @@ def perform_move(field, key):
 
     new_field = list(field)
     new_field[empty_mark_index], new_field[empty_mark_index + MOVES[key]] = \
-    new_field[empty_mark_index + MOVES[key]], new_field[empty_mark_index]
+        new_field[empty_mark_index + MOVES[key]], new_field[empty_mark_index]
 
     return new_field
 
 
 def handle_user_input():
-    """
-    Handles user input. List of accepted moves:
-        'w' - up,
-        's' - down,
-        'a' - left,
-        'd' - right
-    :return: <str> current move.
-    """
     allowed_moves = list(MOVES.keys())
     move = ''
     while move not in allowed_moves:
-        move = input('Use: "w", "s", "a", "d" ')
+         move = input('Use: "w", "s", "a", "d" ')
     return move
+
 def main():
     """
     The main method. It stars when the program is called.
